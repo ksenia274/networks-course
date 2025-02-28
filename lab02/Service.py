@@ -28,13 +28,21 @@ def add_product():
         'id': next_id,
         'name': data['name'],
         'description': data['description'],
-        'icon' : data['icon']
+        'icon' : None
     }
     products.append(new_product)
     next_id += 1
     return jsonify(new_product), 201
 
-@app.route('/product/<int:product_id>/icon', methods=['GET'])
+@app.route('/products/<int:product_id>/icon', methods=['POST'])
+def add_product_icon(product_id):
+    product = next((p for p in products if p['id'] == product_id), None)
+    if product is not None:
+        data = request.json
+        product['icon'] = data['icon']
+    return jsonify(product)
+
+@app.route('/products/<int:product_id>/icon', methods=['GET'])
 def get_product_icon(product_id):
     product = next((p for p in products if p['id'] == product_id), None)
     if product is not None and 'icon' in product:

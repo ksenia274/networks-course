@@ -1,0 +1,16 @@
+INFO:root:Starting proxy server at: http://localhost:8888
+ERROR:root:Error: Invalid URL 'http://': No host supplied
+ERROR:root:Error: HTTPConnectionPool(host='favicon.ico', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x101ef7170>: Failed to resolve 'favicon.ico' ([Errno 8] nodename nor servname provided, or not known)"))
+INFO:root:URL: http://www.google.com, Response Code: 200
+ERROR:root:Error: HTTPConnectionPool(host='images', port=80): Max retries exceeded with url: /branding/googlelogo/1x/googlelogo_white_background_color_272x92dp.png (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x101fa2570>: Failed to resolve 'images' ([Errno 8] nodename nor servname provided, or not known)"))
+ERROR:root:Error: HTTPConnectionPool(host='textinputassistant', port=80): Max retries exceeded with url: /tia.png (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x101ef7170>: Failed to resolve 'textinputassistant' ([Errno 8] nodename nor servname provided, or not known)"))
+ERROR:root:Error: HTTPConnectionPool(host='client_204', port=80): Max retries exceeded with url: /?&atyp=i&biw=1728&bih=1004&ei=0U7VZ4WeFJDBwPAPp_q2oAs&opi=89978449 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x101fa1a90>: Failed to resolve 'client_204' ([Errno 8] nodename nor servname provided, or not known)"))
+ERROR:root:Error: HTTPConnectionPool(host='images', port=80): Max retries exceeded with url: /nav_logo229.png (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x101fa2cc0>: Failed to resolve 'images' ([Errno 8] nodename nor servname provided, or not known)"))
+ERROR:root:Error: HTTPConnectionPool(host='xjs', port=80): Max retries exceeded with url: /_/js/k=xjs.hp.en.sCXdW3LcOLw.es5.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAcAAAAIwAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAfEcAQAAsAgCAFw/d=1/ed=1/dg=3/rs=ACT90oHlPLvzJtVXIV0XlTFrTVdHeRKNew/m=sb_he,d (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x101fa38c0>: Failed to resolve 'xjs' ([Errno 8] nodename nor servname provided, or not known)"))
+ERROR:root:Error: HTTPConnectionPool(host='images', port=80): Max retries exceeded with url: /nav_logo229.png (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x102218470>: Failed to resolve 'images' ([Errno 8] nodename nor servname provided, or not known)"))
+ERROR:root:Error: HTTPConnectionPool(host='favicon.ico', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x101fa2f90>: Failed to resolve 'favicon.ico' ([Errno 8] nodename nor servname provided, or not known)"))
+INFO:root:URL: http://google.com/1, Response Code: 404
+INFO:root:URL: http://google.com/, Response Code: 405
+INFO:root:URL: http://google.com/, Response Code: 405
+INFO:root:URL: http://google.com/search/?text=%D0%B0%D0%B8%D0%B0%D0%B2%D0%B8, Response Code: 404
+INFO:root:URL: http://google.com/search/, Response Code: 404

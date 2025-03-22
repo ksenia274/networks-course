@@ -1,14 +1,28 @@
 import socket
 import base64
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
 
-# Конфигурация SMTP сервера
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
 SENDER_EMAIL = 'kcen.yackubowa2013@gmail.com'
 SENDER_PASSWORD = 'sdxg dviv utsv jmhj'
 
-def send_email(recipient_email, subject, message):
+def send_email(recipient_email, subject, text_message, image_path):
     try:
+        msg = MIMEMultipart()
+        msg['From'] = SENDER_EMAIL
+        msg['To'] = recipient_email
+        msg['Subject'] = subject
+
+        msg.attach(MIMEText(text_message, 'plain'))
+
+        with open(image_path, 'rb') as img_file:
+            img_data = img_file.read()
+            image = MIMEImage(img_data, name=image_path.split('/')[-1])
+            msg.attach(image)
+
         client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         client_socket.connect((SMTP_SERVER, SMTP_PORT))
         response = client_socket.recv(1024).decode()
@@ -53,17 +67,16 @@ def send_email(recipient_email, subject, message):
         response = client_socket.recv(1024).decode()
         print(response)
 
-        email_body = f"From: {SENDER_EMAIL}\r\nTo: {recipient_email}\r\nSubject: {subject}\r\n\r\n{message}\r\n.\r\n"
-        client_socket.send(email_body.encode())
+        client_socket.send(msg.as_string().encode())
+        client_socket.send(b'\r\n.\r\n')
         response = client_socket.recv(1024).decode()
         print(response)
 
-        # Завершаем сессию
         client_socket.send(b'QUIT\r\n')
         response = client_socket.recv(1024).decode()
         print(response)
 
-        print(f"Email sent successfully to {recipient_email}")
+        print(f"Email with image sent successfully to {recipient_email}")
 
     except Exception as e:
         print(f"Failed to send email: {e}")
@@ -73,7 +86,8 @@ def send_email(recipient_email, subject, message):
 
 if __name__ == "__main__":
     recipient_email = input("Enter recipient email: ")
-    subject = "Test Email"
-    message = "This is a plain text email."
+    subject = "Test Email with Image"
+    text_message = "This is a test email with an image attachment."
+    image_path = input("Enter the path to the image file: ")
 
-    send_email(recipient_email, subject, message)
+    send_email(recipient_email, subject, text_message, image_path)

@@ -27,7 +27,9 @@ Final state of router 198.71.243.61 table:
 Приведите скрин или лог работы программы.
 
 #### Демонстрация работы
-todo
+<img src="images/img.png" width=700 />
+<img src="images/img_1.png" width=700 />
+<img src="images/img_2.png" width=700 />
 
 ### Задание Б (1 балл)
 Выведите на консоль промежуточные этапы работы протокола: по каждому маршрутизатору
@@ -43,7 +45,14 @@ Simulation step 3 of router 42.162.54.248
 ```
 
 #### Демонстрация работы
-todo
+1. 
+<img src="images/img_3.png" width=700 />
+<img src="images/img_4.png" width=700 />
+
+2. 
+<img src="images/img_5.png" width=700 />
+<img src="images/img_6.png" width=700 />
+<img src="images/img_7.png" width=700 />
 
 ### Задание В (2 балла)
 
@@ -70,7 +79,11 @@ UDP, а также выводит количество потерянных па
 <img src="images/tcp.png" width=700 />
 
 #### Демонстрация работы
-todo
+<img src="images/img_8.png" width=700 />
+<img src="images/img_9.png" width=700 />
+<img src="images/img_10.png" width=700 />
+
+
 
 ### 2. Измерение по протоколу UDP (3 балла)
 Пример интерфейса:
@@ -78,7 +91,9 @@ todo
 <img src="images/udp.png" width=700 />
 
 #### Демонстрация работы
-todo
+<img src="images/img_11.png" width=700 />
+<img src="images/img_13.png" width=700 />
+<img src="images/img_12.png" width=700 />
    
 
 ## Транслятор портов (6 баллов)

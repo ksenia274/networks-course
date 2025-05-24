@@ -51,6 +51,14 @@ Redundancy Check, CRC).
 выведите на экран: полезные передаваемые данные, пакет в закодированном виде, контрольный
 код.
 
+<img src="images/img.png" width=500 />
+<img src="images/img_2.png" width=500 />
+<img src="images/img_3.png" width=500 />
+<img src="images/img_4.png" width=500 />
+<img src="images/img_5.png" width=500 />
+<img src="images/img_6.png" width=500 />
+<img src="images/img_7.png" width=500 />
+
 ### Подсчет сетевого трафика (8 баллов)
 
 ### Задание А (2 балла)
@@ -58,7 +66,7 @@ Redundancy Check, CRC).
 его природы.
 
 #### Демонстрация работы
-todo
+<img src="images/img_8.png" width=500 />
 
 ### Задание Б (2 балла)
 Разработать приложение, подсчитывающее входящий и исходящий сетевой трафик с учетом
@@ -66,7 +74,14 @@ todo
 формировать отчет с разделением трафика по портам назначения/отправки.
 
 #### Демонстрация работы
-todo
+Здесь часть вывода, полный лог в файле log_network_traffic_monitor_with_report.txt
+
+<img src="images/img_9.png" width=500 />
+<img src="images/img_10.png" width=500 />
+<img src="images/img_11.png" width=500 />
+<img src="images/img_12.png" width=500 />
+<img src="images/img_13.png" width=500 />
+
 
 ### Задание В (4 балла)
 Разработать приложение, анализирующее весь сетевой трафик подсети. Приложение должно

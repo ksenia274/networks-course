@@ -51,6 +51,14 @@ Redundancy Check, CRC).
 выведите на экран: полезные передаваемые данные, пакет в закодированном виде, контрольный
 код.
 
+<img src="images/img.png" width=500 />
+<img src="images/img_2.png" width=500 />
+<img src="images/img_3.png" width=500 />
+<img src="images/img_4.png" width=500 />
+<img src="images/img_5.png" width=500 />
+<img src="images/img_6.png" width=500 />
+<img src="images/img_7.png" width=500 />
+
 ### Подсчет сетевого трафика (8 баллов)
 
 ### Задание А (2 балла)
@@ -58,7 +66,7 @@ Redundancy Check, CRC).
 его природы.
 
 #### Демонстрация работы
-todo
+<img src="images/img_8.png" width=500 />
 
 ### Задание Б (2 балла)
 Разработать приложение, подсчитывающее входящий и исходящий сетевой трафик с учетом
@@ -66,7 +74,14 @@ todo
 формировать отчет с разделением трафика по портам назначения/отправки.
 
 #### Демонстрация работы
-todo
+Здесь часть вывода, полный лог в файле log_network_traffic_monitor_with_report.txt
+
+<img src="images/img_9.png" width=500 />
+<img src="images/img_10.png" width=500 />
+<img src="images/img_11.png" width=500 />
+<img src="images/img_12.png" width=500 />
+<img src="images/img_13.png" width=500 />
+
 
 ### Задание В (4 балла)
 Разработать приложение, анализирующее весь сетевой трафик подсети. Приложение должно
@@ -124,7 +139,36 @@ todo
 протокола ALOHA, когда $N$ стремится к бесконечности.
 
 #### Решение
-todo
+
+1.Эффективность (пропускная способность) дискретного ALOHA при N активных узлах задаётся выражением:
+
+$$ S(p) = N \cdot p \cdot (1 - p)^{N - 1} $$
+
+Найдем значение p, при котором эта функция достигает максимума. Для этого продифференцируем $S(p)$ по $p$ и приравняем производную к нулю:
+
+$$ \frac{dS}{dp} = N \cdot \left[(1 - p)^{N - 1} - p \cdot (N - 1)(1 - p)^{N - 2}\right] = 0 $$
+
+$$ N (1 - p)^{N - 2} \cdot \left[(1 - p) - p(N - 1)\right] = 0 $$
+
+Приравниваем выражение в скобках к нулю:
+
+$$ (1 - p) - p(N - 1) = 0 \Rightarrow 1 - p - p(N - 1) = 0 \Rightarrow 1 - pN = 0 \Rightarrow p = \frac{1}{N} $$
+
+**Ответ:** Значение $p = \frac{1}{N}$ максимизирует эффективность.
+
+---
+
+2.
+
+Подставим $p = \frac{1}{N}$ в выражение эффективности:
+
+$$ S = N \cdot \frac{1}{N} \cdot \left(1 - \frac{1}{N}\right)^{N - 1} = \left(1 - \frac{1}{N}\right)^{N - 1} $$
+
+Рассмотрим предел при $N \to \infty$:
+
+$$ \lim_{N \to \infty} \left(1 - \frac{1}{N}\right)^{N - 1} = \lim_{N \to \infty} \left[\left(1 - \frac{1}{N}\right)^N\right]^{1 - \frac{1}{N}} = \left(\frac{1}{e}\right)$$
+
+**Ответ:** Эффективность стремится к $\frac{1}{e} \approx 0.3679$, когда $N \to \infty$.
 
 ### Задача 2 (3 балла)
 Предположим, у нас имеются четыре активных узла – A, Б, В и Г – конкурирующих за доступ к
